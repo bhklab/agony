@@ -86,11 +86,3 @@ This paper introduces a novel algorithm based on the φ-mixing coefficient from 
 #### 5. [Reconstructing Directed Gene Regulatory Network by Only Gene Expression Data](https://pmc.ncbi.nlm.nih.gov/articles/PMC5001240/)
 
 ^[The paper proposes the Context-Based Dependency Network (CBDN) method to reconstruct directed gene regulatory networks using solely gene expression data. This approach addresses the challenge of inferring regulatory directions without additional data, such as eQTLs or gene knock-out experiments, which are often unavailable for human tissue samples.]({"attribution":{"attributableIndex":"1987-1"}})
-
---------------------------------------
-
-#### 6. [Slack Message Link](https://bhklab.slack.com/archives/C06DSJFM5/p1739387768048899)
-
-^[This link points to a message within a Slack workspace. Access to the content requires appropriate permissions and is not publicly available.]({"attribution":{"attributableIndex":"2485-1"}})
-
---------------------------------------
