@@ -150,7 +150,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-64/zeromq-4.3.5-h3b0a872_7.conda
       - conda: https://prefix.dev/conda-forge/noarch/zipp-3.21.0-pyhd8ed1ab_1.conda
       - conda: https://prefix.dev/conda-forge/linux-64/zstandard-0.23.0-py310ha75aee5_2.conda
-      - conda: packages/agony
+      - conda: cpp/agony
         subdir: linux-64
       osx-64:
       - conda: https://prefix.dev/conda-forge/noarch/anyio-4.9.0-pyh29332c3_0.conda
@@ -288,7 +288,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-64/zeromq-4.3.5-h7130eaa_7.conda
       - conda: https://prefix.dev/conda-forge/noarch/zipp-3.21.0-pyhd8ed1ab_1.conda
       - conda: https://prefix.dev/conda-forge/osx-64/zstandard-0.23.0-py310hbb8c376_2.conda
-      - conda: packages/agony
+      - conda: cpp/agony
         subdir: osx-64
       osx-arm64:
       - conda: https://prefix.dev/conda-forge/noarch/anyio-4.9.0-pyh29332c3_0.conda
@@ -426,7 +426,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-arm64/zeromq-4.3.5-hc1bb282_7.conda
       - conda: https://prefix.dev/conda-forge/noarch/zipp-3.21.0-pyhd8ed1ab_1.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/zstandard-0.23.0-py310h078409c_2.conda
-      - conda: packages/agony
+      - conda: cpp/agony
         subdir: osx-arm64
       win-64:
       - conda: https://prefix.dev/conda-forge/noarch/anyio-4.9.0-pyh29332c3_0.conda
@@ -565,7 +565,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/win-64/zeromq-4.3.5-ha9f60a1_7.conda
       - conda: https://prefix.dev/conda-forge/noarch/zipp-3.21.0-pyhd8ed1ab_1.conda
       - conda: https://prefix.dev/conda-forge/win-64/zstandard-0.23.0-py310ha8f682b_2.conda
-      - conda: packages/agony
+      - conda: cpp/agony
         subdir: win-64
   docs:
     channels:
@@ -730,7 +730,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-64/zeromq-4.3.5-h3b0a872_7.conda
       - conda: https://prefix.dev/conda-forge/noarch/zipp-3.21.0-pyhd8ed1ab_1.conda
       - conda: https://prefix.dev/conda-forge/linux-64/zstandard-0.23.0-py310ha75aee5_2.conda
-      - conda: packages/agony
+      - conda: cpp/agony
         subdir: linux-64
       osx-64:
       - conda: https://prefix.dev/conda-forge/noarch/anyio-4.9.0-pyh29332c3_0.conda
@@ -881,7 +881,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-64/zeromq-4.3.5-h7130eaa_7.conda
       - conda: https://prefix.dev/conda-forge/noarch/zipp-3.21.0-pyhd8ed1ab_1.conda
       - conda: https://prefix.dev/conda-forge/osx-64/zstandard-0.23.0-py310hbb8c376_2.conda
-      - conda: packages/agony
+      - conda: cpp/agony
         subdir: osx-64
       osx-arm64:
       - conda: https://prefix.dev/conda-forge/noarch/anyio-4.9.0-pyh29332c3_0.conda
@@ -1032,7 +1032,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-arm64/zeromq-4.3.5-hc1bb282_7.conda
       - conda: https://prefix.dev/conda-forge/noarch/zipp-3.21.0-pyhd8ed1ab_1.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/zstandard-0.23.0-py310h078409c_2.conda
-      - conda: packages/agony
+      - conda: cpp/agony
         subdir: osx-arm64
       win-64:
       - conda: https://prefix.dev/conda-forge/noarch/anyio-4.9.0-pyh29332c3_0.conda
@@ -1183,7 +1183,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/win-64/zeromq-4.3.5-ha9f60a1_7.conda
       - conda: https://prefix.dev/conda-forge/noarch/zipp-3.21.0-pyhd8ed1ab_1.conda
       - conda: https://prefix.dev/conda-forge/win-64/zstandard-0.23.0-py310ha8f682b_2.conda
-      - conda: packages/agony
+      - conda: cpp/agony
         subdir: win-64
   quality:
     channels:
@@ -1336,7 +1336,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-64/zeromq-4.3.5-h3b0a872_7.conda
       - conda: https://prefix.dev/conda-forge/noarch/zipp-3.21.0-pyhd8ed1ab_1.conda
       - conda: https://prefix.dev/conda-forge/linux-64/zstandard-0.23.0-py310ha75aee5_2.conda
-      - conda: packages/agony
+      - conda: cpp/agony
         subdir: linux-64
       osx-64:
       - conda: https://prefix.dev/conda-forge/noarch/anyio-4.9.0-pyh29332c3_0.conda
@@ -1475,7 +1475,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-64/zeromq-4.3.5-h7130eaa_7.conda
       - conda: https://prefix.dev/conda-forge/noarch/zipp-3.21.0-pyhd8ed1ab_1.conda
       - conda: https://prefix.dev/conda-forge/osx-64/zstandard-0.23.0-py310hbb8c376_2.conda
-      - conda: packages/agony
+      - conda: cpp/agony
         subdir: osx-64
       osx-arm64:
       - conda: https://prefix.dev/conda-forge/noarch/anyio-4.9.0-pyh29332c3_0.conda
@@ -1614,7 +1614,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-arm64/zeromq-4.3.5-hc1bb282_7.conda
       - conda: https://prefix.dev/conda-forge/noarch/zipp-3.21.0-pyhd8ed1ab_1.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/zstandard-0.23.0-py310h078409c_2.conda
-      - conda: packages/agony
+      - conda: cpp/agony
         subdir: osx-arm64
       win-64:
       - conda: https://prefix.dev/conda-forge/noarch/anyio-4.9.0-pyh29332c3_0.conda
@@ -1754,7 +1754,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/win-64/zeromq-4.3.5-ha9f60a1_7.conda
       - conda: https://prefix.dev/conda-forge/noarch/zipp-3.21.0-pyhd8ed1ab_1.conda
       - conda: https://prefix.dev/conda-forge/win-64/zstandard-0.23.0-py310ha8f682b_2.conda
-      - conda: packages/agony
+      - conda: cpp/agony
         subdir: win-64
 packages:
 - conda: https://prefix.dev/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
@@ -1776,7 +1776,7 @@ packages:
   license_family: BSD
   size: 23621
   timestamp: 1650670423406
-- conda: packages/agony
+- conda: cpp/agony
   name: agony
   version: 0.1.0
   build: hbf21a9e_0
@@ -1786,10 +1786,10 @@ packages:
   - libgcc >=14
   - python_abi 3.10.* *_cp310
   input:
-    hash: 8a07565d49c6c861e937fce5b93cbc766e2b5d51c6e4ba5dc23627c0d005b977
+    hash: 2bf8e422c64f41cc34bab67081f9c653bcaed39e3f3ffac59a2b5d4f38560480
     globs:
     - pixi.toml
-- conda: packages/agony
+- conda: cpp/agony
   name: agony
   version: 0.1.0
   build: hbf21a9e_0
@@ -1798,10 +1798,10 @@ packages:
   - libcxx >=20
   - python_abi 3.10.* *_cp310
   input:
-    hash: 8a07565d49c6c861e937fce5b93cbc766e2b5d51c6e4ba5dc23627c0d005b977
+    hash: 2bf8e422c64f41cc34bab67081f9c653bcaed39e3f3ffac59a2b5d4f38560480
     globs:
     - pixi.toml
-- conda: packages/agony
+- conda: cpp/agony
   name: agony
   version: 0.1.0
   build: hbf21a9e_0
@@ -1810,10 +1810,10 @@ packages:
   - libcxx >=20
   - python_abi 3.10.* *_cp310
   input:
-    hash: 8a07565d49c6c861e937fce5b93cbc766e2b5d51c6e4ba5dc23627c0d005b977
+    hash: 2bf8e422c64f41cc34bab67081f9c653bcaed39e3f3ffac59a2b5d4f38560480
     globs:
     - pixi.toml
-- conda: packages/agony
+- conda: cpp/agony
   name: agony
   version: 0.1.0
   build: hbf21a9e_0
@@ -1823,7 +1823,7 @@ packages:
   - vc14_runtime >=14.16.27033
   - python_abi 3.10.* *_cp310
   input:
-    hash: 8a07565d49c6c861e937fce5b93cbc766e2b5d51c6e4ba5dc23627c0d005b977
+    hash: 2bf8e422c64f41cc34bab67081f9c653bcaed39e3f3ffac59a2b5d4f38560480
     globs:
     - pixi.toml
 - conda: https://prefix.dev/conda-forge/noarch/anyio-4.9.0-pyh29332c3_0.conda
