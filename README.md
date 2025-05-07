@@ -35,5 +35,20 @@ If you haven't installed it yet, [follow these instructions](https://pixi.sh/lat
 pixi install
 ```
 
+### Usage
+
+agon bindings are available in the `agony` module.
+
+I've setup two tasks to showcase this
+
+```console
+pixi run help
+```
+
+```console
+pixi run cycle_dfs
+```
+
 ## Documentation
+
 Click [here](https://bhklab.github.io/agony) to view the full documentation.
