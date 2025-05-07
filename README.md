@@ -1,6 +1,6 @@
 # Agony
 
-**Authors:** [James Bannon](https://github.com/jbannon), Julia Nguyen, Matthew Boccalon, [Jermiah Joseph](https://github.com/jjjermiah)
+**Authors:** [James Bannon](https://github.com/jbannon), [Julia Nguyen](https://github.com/julianguyn), [Matthew Boccalon](https://github.com/mattbocc), [Jermiah Joseph](https://github.com/jjjermiah)
 
 **Contact:** [bhklab.jermiahjoseph@gmail.com](mailto:bhklab.jermiahjoseph@gmail.com)
 
