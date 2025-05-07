@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jermiah Joseph" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Agony Project Documentation - Agony</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Agony Project Documentation";
+        var mkdocs_page_input_path = "cpp_for_python_devs.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Agony
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../usage/">Usage</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../data_sources/">Data Sources</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../devnotes/">Developer Notes</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Agony</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Agony Project Documentation</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/bhklab/agony/edit/master/docs/cpp_for_python_devs.md">Edit on agony</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="agony-project-documentation">Agony Project Documentation</h1>
+<p>This document provides an overview of the Agony project, aimed at helping Python developers understand the C++ codebase and its components.</p>
+<h2 id="project-structure">Project Structure</h2>
+<p>The Agony project contains both C++ and Python code, with the core algorithms implemented in C++ and Python bindings that make these algorithms accessible from Python.</p>
+<pre><code class="language-console">cpp/agony/          - Core C++ implementation
+  ├── include/      - Header files that define interfaces
+  ├── src/          - Implementation files
+  ├── bindings/     - Python binding code
+  └── old/          - Legacy implementations (for reference)
+src/                - Python package code
+docs/               - Documentation
+</code></pre>
+<h2 id="core-components">Core Components</h2>
+<h3 id="directedgraph-class">DirectedGraph Class</h3>
+<p>The <code>DirectedGraph</code> class is the primary data structure used in the project. It implements a directed graph with weighted edges, similar to NetworkX's DiGraph in Python.</p>
+<h4 id="what-is-a-directed-graph">What is a Directed Graph?</h4>
+<p>A directed graph (or digraph) is a set of vertices (nodes) connected by edges, where the edges have a direction from one vertex to another. In our implementation:</p>
+<ul>
+<li>Nodes are represented by integer IDs</li>
+<li>Edges connect a source node to a target node</li>
+<li>Edges can have weights (default is 1.0)</li>
+</ul>
+<h4 id="c-types-and-their-python-equivalents">C++ Types and Their Python Equivalents</h4>
+<table>
+<thead>
+<tr>
+<th>C++ Type</th>
+<th>Python Equivalent</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>std::unordered_set&lt;int&gt;</code></td>
+<td><code>set()</code></td>
+<td>A collection of unique node IDs</td>
+</tr>
+<tr>
+<td><code>std::unordered_map&lt;K,V&gt;</code></td>
+<td><code>dict()</code></td>
+<td>A key-value mapping, like Python dictionaries</td>
+</tr>
+<tr>
+<td><code>std::vector&lt;T&gt;</code></td>
+<td><code>list()</code></td>
+<td>A sequence container, similar to Python lists</td>
+</tr>
+<tr>
+<td><code>std::pair&lt;T1,T2&gt;</code></td>
+<td><code>tuple()</code></td>
+<td>A pair of values, like a 2-element Python tuple</td>
+</tr>
+<tr>
+<td><code>const T&amp;</code></td>
+<td>N/A</td>
+<td>A reference to data (avoids copying, improves performance)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="odd-type-descriptions">"Odd" Type Descriptions</h4>
+<p>Some C++ types might look confusing to Python developers:</p>
+<ul>
+<li>
+<p><strong>Template parameters</strong> (things in <code>&lt;&gt;</code> brackets): These are like Python's type hints, but required by the compiler. For example, <code>std::vector&lt;int&gt;</code> is a list that can only contain integers.</p>
+</li>
+<li>
+<p><strong><code>const</code> keyword</strong>: Indicates that something won't be modified. When you see <code>const</code> in function parameters or return types, it's saying "this won't change the data."</p>
+</li>
+<li>
+<p><strong><code>&amp;</code> symbol</strong>: Indicates a reference. Instead of copying data, C++ can pass a reference to the original data for efficiency.</p>
+</li>
+<li>
+<p><strong>Function names with <code>::</code> operator</strong>: The <code>::</code> operator in C++ shows namespace or class membership, similar to Python's dot notation.</p>
+</li>
+</ul>
+<h2 id="basic-usage">Basic Usage</h2>
+<p>While Python developers won't directly use the C++ code, understanding the underlying implementation helps when using the Python bindings.</p>
+<p>The graph implementation allows:</p>
+<ol>
+<li>Adding nodes to the graph</li>
+<li>Adding weighted directed edges between nodes</li>
+<li>Checking if edges exist</li>
+<li>Getting weights of edges</li>
+<li>Retrieving all nodes in the graph</li>
+<li>Finding all neighbors of a node</li>
+</ol>
+<h2 id="advanced-c-concepts-for-python-developers">Advanced C++ Concepts for Python Developers</h2>
+<h3 id="namespaces">Namespaces</h3>
+<p>C++ uses namespaces (like <code>namespace agony</code>) to prevent naming collisions. This is similar to Python modules and helps organize code.</p>
+<h3 id="custom-hash-functions">Custom Hash Functions</h3>
+<p>In C++, unlike Python, you need to define hash functions for custom types when using them as keys in hash tables. The <code>pair_hash</code> struct serves this purpose for pairs of integers.</p>
+<h3 id="function-modifiers">Function Modifiers</h3>
+<ul>
+<li><code>const</code> after a function declaration means the function won't modify the object.</li>
+<li>Function declarations without definitions are the C++ equivalent of abstract methods.</li>
+</ul>
+<h3 id="memory-management">Memory Management</h3>
+<p>C++ requires more explicit memory management than Python. Our implementation uses:</p>
+<ul>
+<li>References (with <code>&amp;</code>) to avoid unnecessary copying</li>
+<li>Container classes that handle memory allocation/deallocation</li>
+</ul>
+<h2 id="building-and-extending">Building and Extending</h2>
+<p>If you need to modify the C++ code, you'll need to:</p>
+<ol>
+<li>Update the appropriate files in <code>cpp/agony/include</code> and <code>cpp/agony/src</code></li>
+<li>Rebuild the project (follow build instructions in README)</li>
+<li>Ensure Python bindings are updated if interfaces change</li>
+</ol>
+<p>Python developers should focus on the Python interface rather than modifying the C++ code directly unless absolutely necessary.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/bhklab/agony" class="fa fa-code-fork" style="color: #fcfcfc"> agony</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
