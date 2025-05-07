@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20...3.27)
-project(agony_project)
+project(agony)
 
 find_package(Python 3.8 COMPONENTS Interpreter Development.Module REQUIRED)
 

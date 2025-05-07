@@ -4,19 +4,37 @@ name = "agony"
 authors = ["Jermiah Joseph <bhklab.jermiahjoseph@gmail.com>"]
 description = "Agony implementation"
 license = "MIT"
-channels = ["conda-forge", "bioconda"]
+channels = [  "https://prefix.dev/pixi-build-backends",
+  "https://prefix.dev/conda-forge", "bioconda"]
 platforms = ["osx-arm64", "linux-64", "win-64", "osx-64"]
+preview = ["pixi-build"] 
 
-[environments]
-quality = { features = ["quality"], solve-group = "default" }
-docs = { features = ["docs"], solve-group = "default" }
+# package building
+[package] 
+name = "agony"
+version = "0.1.0"
+
+[package.build]
+backend = { name = "pixi-build-cmake", version = "0.1.*" } 
+[package.build.configuration]
+extra-args = ["-DCMAKE_BUILD_TYPE=Release"] 
+
+[package.host-dependencies]
+cmake = "3.20.*"   
+nanobind = "2.4.*" 
+python = "3.10.*"  
 
 [dependencies]
+agony = {path = "."}
 python = ">=3.10"
 ipython = "*"
 ipykernel = "*"
 jupyterlab = "*"
 pip = "*"
+
+[environments]
+quality = { features = ["quality"], solve-group = "default" }
+docs = { features = ["docs"], solve-group = "default" }
 ############################################## QUALITY ###############################################
 # Quality includes linting, type checking, and formatting
 [feature.quality.dependencies]
