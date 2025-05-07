@@ -1,40 +1,48 @@
-
 [workspace]
 name = "agony"
 authors = ["Jermiah Joseph <bhklab.jermiahjoseph@gmail.com>"]
 description = "Agony implementation"
 license = "MIT"
-channels = [  "https://prefix.dev/pixi-build-backends",
-  "https://prefix.dev/conda-forge", "bioconda"]
+channels = [
+    "https://prefix.dev/pixi-build-backends",
+    "https://prefix.dev/conda-forge",
+    "bioconda"
+]
 platforms = ["osx-arm64", "linux-64", "win-64", "osx-64"]
-preview = ["pixi-build"] 
+preview = ["pixi-build"]
 
 # package building
-[package] 
+[package]
 name = "agony"
 version = "0.1.0"
 
 [package.build]
-backend = { name = "pixi-build-cmake", version = "0.1.*" } 
+backend = { name = "pixi-build-cmake", version = "0.1.*" }
+
 [package.build.configuration]
-extra-args = ["-DCMAKE_BUILD_TYPE=Release"] 
+extra-args = ["-DCMAKE_BUILD_TYPE=Release"]
 
 [package.host-dependencies]
-cmake = "3.20.*"   
-nanobind = "2.4.*" 
-python = "3.10.*"  
+cmake = "3.20.*"
+nanobind = "2.4.*"
+python = "3.10.*"
 
 [dependencies]
-agony = {path = "."}
+agony = { path = "." }
 python = ">=3.10"
 ipython = "*"
 ipykernel = "*"
 jupyterlab = "*"
 pip = "*"
 
+[tasks]
+help = { cmd = "python -c 'import agony; help(agony)'", description = "Show help for agony package" }
+cycle_dfs = { cmd = "python -c 'import agony; print(agony.visualize_cycle_dfs([[1], [2,4], [0], [2], [3]]))'", description = "Visualize cycle_dfs" }
+
 [environments]
 quality = { features = ["quality"], solve-group = "default" }
 docs = { features = ["docs"], solve-group = "default" }
+
 ############################################## QUALITY ###############################################
 # Quality includes linting, type checking, and formatting
 [feature.quality.dependencies]
@@ -44,17 +52,14 @@ ruff = "*"
 ruff-check.cmd = ["ruff", "check"]
 ruff-check.inputs = ["config/ruff.toml", "workflow"]
 ruff-check.description = "Run ruff check"
-
 ruff-format.cmd = ["ruff", "format"]
 ruff-format.inputs = ["config/ruff.toml", "workflow"]
 ruff-format.depends-on = ["ruff-check"]
 ruff-format.description = "Run ruff format, run check first"
-
 qc.depends-on = ["ruff-format", "ruff-check"]
 qc.description = "Quality check: ruff check and format"
 
 ############################################## DOCS ################################################
-
 [feature.docs.dependencies]
 mkdocs = "*"
 mkdocs-include-markdown-plugin = ">=7.0.0,<8"
