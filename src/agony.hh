@@ -30,7 +30,7 @@ largest_slack(const std::vector<std::vector<int>> &graph,
       if (euler_subgraph[i][j] == true && cslack <= edge_slack(i, j, r)) {
         cslack = edge_slack(i, j, r);
         a = i, b = j;
-      g
+        }
   return std::make_pair(a, b);
 }
 
