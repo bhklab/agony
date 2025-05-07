@@ -1,10 +1,8 @@
 # Agony
 
-**Author:** Jermiah Joseph
+**Authors:** [James Bannon](https://github.com/jbannon), Julia Nguyen, Matthew Boccalon, [Jermiah Joseph](https://github.com/jjjermiah)
 
 **Contact:** [bhklab.jermiahjoseph@gmail.com](mailto:bhklab.jermiahjoseph@gmail.com)
-
-**GitHub:** [jjjermiah](https://github.com/jjjermiah)
 
 **Description:** Agony implementation
 
