@@ -1,0 +1,12 @@
+# package building
+[package]
+name = "agony"
+version = "0.1.0"
+
+[package.build]
+backend = { name = "pixi-build-cmake", version = "0.1.*" }
+
+[package.host-dependencies]
+cmake = "3.20.*"
+nanobind = "2.4.*"
+python = "3.10.*"
