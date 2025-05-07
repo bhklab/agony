@@ -1786,7 +1786,7 @@ packages:
   - libgcc >=14
   - python_abi 3.10.* *_cp310
   input:
-    hash: 5afe7bafd6ee76edef19e4eaf0942f94de5893a5b3617438a838cc2d898983ce
+    hash: c2f9c58e77a3151ef3628c888bd716f90f61322fe3d8c2f75e20fdeead5b5b4e
     globs:
     - pixi.toml
 - conda: .
@@ -1798,7 +1798,7 @@ packages:
   - libcxx >=20
   - python_abi 3.10.* *_cp310
   input:
-    hash: 5afe7bafd6ee76edef19e4eaf0942f94de5893a5b3617438a838cc2d898983ce
+    hash: c2f9c58e77a3151ef3628c888bd716f90f61322fe3d8c2f75e20fdeead5b5b4e
     globs:
     - pixi.toml
 - conda: .
@@ -1810,7 +1810,7 @@ packages:
   - libcxx >=20
   - python_abi 3.10.* *_cp310
   input:
-    hash: 5afe7bafd6ee76edef19e4eaf0942f94de5893a5b3617438a838cc2d898983ce
+    hash: c2f9c58e77a3151ef3628c888bd716f90f61322fe3d8c2f75e20fdeead5b5b4e
     globs:
     - pixi.toml
 - conda: .
@@ -1823,7 +1823,7 @@ packages:
   - vc14_runtime >=14.16.27033
   - python_abi 3.10.* *_cp310
   input:
-    hash: 5afe7bafd6ee76edef19e4eaf0942f94de5893a5b3617438a838cc2d898983ce
+    hash: c2f9c58e77a3151ef3628c888bd716f90f61322fe3d8c2f75e20fdeead5b5b4e
     globs:
     - pixi.toml
 - conda: https://prefix.dev/conda-forge/noarch/anyio-4.9.0-pyh29332c3_0.conda

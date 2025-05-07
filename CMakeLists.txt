@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.20...3.27)
 project(agony)
 
+# Set build type to Release
+set(CMAKE_BUILD_TYPE Release CACHE STRING "Build type" FORCE)
+
 find_package(Python 3.8 COMPONENTS Interpreter Development.Module REQUIRED)
 
 execute_process(
