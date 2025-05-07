@@ -2,21 +2,20 @@
 #define AGONY_
 
 #include <vector>
-
-#define max(a, b) (((a) > (b)) ? (a) : (b))
+#include <algorithm>
 
 // gives back the agony of an edge a -> b w.r.t. r
 // a, b: nodes
 // r: a rank function
 inline int edge_agony(int a, int b, const std::vector<int> &r) {
-  return max(r[a] - r[b] + 1, 0);
+    return std::max(r[a] - r[b] + 1, 0);
 }
 
 // gives back the slack of an edge a -> b w.r.t. r
 // a, b: nodes
 // r: a rank function
 inline int edge_slack(int a, int b, const std::vector<int> &r) {
-  return max(r[b] - r[a] - 1, 0);
+    return std::max(r[b] - r[a] - 1, 0);
 }
 
 // return the edge with the largest slack in the euler_subgraph w.r.t r
