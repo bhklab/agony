@@ -37,7 +37,7 @@ pixi install
 
 ### Usage
 
-agon bindings are available in the `agony` module.
+agony bindings are available in the `agony` module.
 
 I've setup two tasks to showcase this
 
@@ -86,3 +86,7 @@ This paper introduces a novel algorithm based on the φ-mixing coefficient from 
 #### 5. [Reconstructing Directed Gene Regulatory Network by Only Gene Expression Data](https://pmc.ncbi.nlm.nih.gov/articles/PMC5001240/)
 
 ^[The paper proposes the Context-Based Dependency Network (CBDN) method to reconstruct directed gene regulatory networks using solely gene expression data. This approach addresses the challenge of inferring regulatory directions without additional data, such as eQTLs or gene knock-out experiments, which are often unavailable for human tissue samples.]({"attribution":{"attributableIndex":"1987-1"}})
+
+
+#### 6. [Resolution of Ranking Hierarchies in Directed Networks](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0191604)
+^[ranked stochastic block models]
