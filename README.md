@@ -73,7 +73,7 @@ The notion of **graph agony** was developed out of a desire to find hierarchies 
 
 --------------------------------------
 
-#### <a id = "2">[2]</a> 2. [Finding Hierarchy in Directed Online Social Networks](https://dl.acm.org/doi/10.1145/1963405.1963484)
+#### <a id = "2">[2.]</a>  [Finding Hierarchy in Directed Online Social Networks](https://dl.acm.org/doi/10.1145/1963405.1963484)
 
 ^[The authors define a measure of hierarchy within directed online social networks and present an efficient algorithm to compute this measure. This work provides insights into the structural organization of social networks and how hierarchical relationships can be identified and quantified.]({"attribution":{"attributableIndex":"717-1"}}) [oai_citation:0‡ACM Digital Library](https://dl.acm.org/doi/10.1145/1963405.1963484?utm_source=chatgpt.com)
 
