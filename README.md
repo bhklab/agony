@@ -53,25 +53,33 @@ pixi run cycle_dfs
 
 Click [here](https://bhklab.github.io/agony) to view the full documentation.
 
+
+
+## Project Ideas and Next Steps
+
+The notion of **graph agony** was developed out of a desire to find hierarchies in directed networks [[2]](#2). 
+
+
+
 ## References
 
 ### 📄 Annotated List of Papers
 
 --------------------------------------
 
-#### 1. [Inferring Genome-Wide Interaction Networks Using the Phi-Mixing Coefficient](https://pmc.ncbi.nlm.nih.gov/articles/PMC7731978/pdf/nihms-1539098.pdf)
+#### <a id="1">[1]</a> 1. [Inferring Genome-Wide Interaction Networks Using the Phi-Mixing Coefficient](https://pmc.ncbi.nlm.nih.gov/articles/PMC7731978/pdf/nihms-1539098.pdf)
 
-This paper introduces a novel algorithm based on the φ-mixing coefficient from probability theory to infer genome-wide interaction networks. The method allows for the construction of weighted and directed networks that can contain cycles, and it has been applied to study subtypes of lung cancer, including small cell (SCLC) and non-small cell (NSCLC), as well as normal lung tissue.
+^[This paper introduces a novel algorithm based on the φ-mixing coefficient from probability theory to infer genome-wide interaction networks. The method allows for the construction of weighted and directed networks that can contain cycles, and it has been applied to study subtypes of lung cancer, including small cell (SCLC) and non-small cell (NSCLC), as well as normal lung tissue. There is a [github repo](https://github.com/nitinksingh/phixer/tree/master) with an implementation that is a combination of C and Matlab.]
 
 --------------------------------------
 
-#### 2. [Finding Hierarchy in Directed Online Social Networks](https://dl.acm.org/doi/10.1145/1963405.1963484)
+#### <a id = "2">[2]</a> 2. [Finding Hierarchy in Directed Online Social Networks](https://dl.acm.org/doi/10.1145/1963405.1963484)
 
 ^[The authors define a measure of hierarchy within directed online social networks and present an efficient algorithm to compute this measure. This work provides insights into the structural organization of social networks and how hierarchical relationships can be identified and quantified.]({"attribution":{"attributableIndex":"717-1"}}) [oai_citation:0‡ACM Digital Library](https://dl.acm.org/doi/10.1145/1963405.1963484?utm_source=chatgpt.com)
 
 --------------------------------------
 
-#### 3. [Faster Way to Agony: Discovering Hierarchies in Directed Graphs](https://arxiv.org/pdf/1902.01477)
+#### <a id="3">[3]</a> 3. [Faster Way to Agony: Discovering Hierarchies in Directed Graphs](https://arxiv.org/pdf/1902.01477)
 
 ^[This paper presents an improved algorithm for computing "agony," a metric used to quantify the hierarchical structure in directed graphs. The proposed method reduces the computational complexity from O(nm²) to O(m²), making it more practical for analyzing large-scale networks.]({"attribution":{"attributableIndex":"1127-1"}}) [oai_citation:1‡arXiv](https://arxiv.org/abs/1902.01477?utm_source=chatgpt.com)
 
@@ -88,5 +96,24 @@ This paper introduces a novel algorithm based on the φ-mixing coefficient from 
 ^[The paper proposes the Context-Based Dependency Network (CBDN) method to reconstruct directed gene regulatory networks using solely gene expression data. This approach addresses the challenge of inferring regulatory directions without additional data, such as eQTLs or gene knock-out experiments, which are often unavailable for human tissue samples.]({"attribution":{"attributableIndex":"1987-1"}})
 
 
+--------------------------------------
+
 #### 6. [Resolution of Ranking Hierarchies in Directed Networks](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0191604)
 ^[ranked stochastic block models]
+
+--------------------------------------
+
+
+#### 7. [SCENIC: single-cell regulatory network inference and clustering](https://www.nature.com/articles/nmeth.4463)
+^[A paper that infers single cell gene regulatory networks. ]
+
+
+--------------------------------------
+
+#### 8. [Inferring Regulatory Networks from Expression Data Using Tree-Based Methods](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0012776)
+^[The GENIE3 algorithm for inferring directed gene regulatory networks. There exists a [github repo](https://github.com/vahuynh/GENIE3) with implementations in C, R, Matlab, and python. This is used in the SCENIC pipeline.]
+
+--------------------------------------
+
+#### 9. [bLARS: An Algorithm to Infer Gene Regulatory Networks](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7138615)
+^[Another algorithm for inferring directed gene regulatory networks from gene expression.]
