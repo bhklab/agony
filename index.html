@@ -54,21 +54,29 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#project-ideas-and-next-steps">Project Ideas and Next Steps</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#references">References</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#annotated-list-of-papers">📄 Annotated List of Papers</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#1-inferring-genome-wide-interaction-networks-using-the-phi-mixing-coefficient">1. Inferring Genome-Wide Interaction Networks Using the Phi-Mixing Coefficient</a>
+    <li class="toctree-l4"><a class="reference internal" href="#1-1-inferring-genome-wide-interaction-networks-using-the-phi-mixing-coefficient">[1] 1. Inferring Genome-Wide Interaction Networks Using the Phi-Mixing Coefficient</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#2-finding-hierarchy-in-directed-online-social-networks">2. Finding Hierarchy in Directed Online Social Networks</a>
+    <li class="toctree-l4"><a class="reference internal" href="#2-2-finding-hierarchy-in-directed-online-social-networks">[2] 2. Finding Hierarchy in Directed Online Social Networks</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#3-faster-way-to-agony-discovering-hierarchies-in-directed-graphs">3. Faster Way to Agony: Discovering Hierarchies in Directed Graphs</a>
+    <li class="toctree-l4"><a class="reference internal" href="#3-3-faster-way-to-agony-discovering-hierarchies-in-directed-graphs">[3] 3. Faster Way to Agony: Discovering Hierarchies in Directed Graphs</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#4-tiers-for-peers-a-practical-algorithm-for-discovering-hierarchy-in-weighted-networks">4. Tiers for Peers: A Practical Algorithm for Discovering Hierarchy in Weighted Networks</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#5-reconstructing-directed-gene-regulatory-network-by-only-gene-expression-data">5. Reconstructing Directed Gene Regulatory Network by Only Gene Expression Data</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#6-resolution-of-ranking-hierarchies-in-directed-networks">6. Resolution of Ranking Hierarchies in Directed Networks</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#7-scenic-single-cell-regulatory-network-inference-and-clustering">7. SCENIC: single-cell regulatory network inference and clustering</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#8-inferring-regulatory-networks-from-expression-data-using-tree-based-methods">8. Inferring Regulatory Networks from Expression Data Using Tree-Based Methods</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#9-blars-an-algorithm-to-infer-gene-regulatory-networks">9. bLARS: An Algorithm to Infer Gene Regulatory Networks</a>
     </li>
         </ul>
     </li>
@@ -147,16 +155,18 @@ If you haven't installed it yet, <a href="https://pixi.sh/latest/">follow these 
 </code></pre>
 <h2 id="documentation">Documentation</h2>
 <p>Click <a href="https://bhklab.github.io/agony">here</a> to view the full documentation.</p>
+<h2 id="project-ideas-and-next-steps">Project Ideas and Next Steps</h2>
+<p>The notion of <strong>graph agony</strong> was developed out of a desire to find hierarchies in directed networks <a href="#2">[2]</a>. </p>
 <h2 id="references">References</h2>
 <h3 id="annotated-list-of-papers">📄 Annotated List of Papers</h3>
 <hr />
-<h4 id="1-inferring-genome-wide-interaction-networks-using-the-phi-mixing-coefficient">1. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7731978/pdf/nihms-1539098.pdf">Inferring Genome-Wide Interaction Networks Using the Phi-Mixing Coefficient</a></h4>
-<p>This paper introduces a novel algorithm based on the φ-mixing coefficient from probability theory to infer genome-wide interaction networks. The method allows for the construction of weighted and directed networks that can contain cycles, and it has been applied to study subtypes of lung cancer, including small cell (SCLC) and non-small cell (NSCLC), as well as normal lung tissue.</p>
+<h4 id="1-1-inferring-genome-wide-interaction-networks-using-the-phi-mixing-coefficient"><a id="1">[1]</a> 1. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7731978/pdf/nihms-1539098.pdf">Inferring Genome-Wide Interaction Networks Using the Phi-Mixing Coefficient</a></h4>
+<p>^[This paper introduces a novel algorithm based on the φ-mixing coefficient from probability theory to infer genome-wide interaction networks. The method allows for the construction of weighted and directed networks that can contain cycles, and it has been applied to study subtypes of lung cancer, including small cell (SCLC) and non-small cell (NSCLC), as well as normal lung tissue. There is a <a href="https://github.com/nitinksingh/phixer/tree/master">github repo</a> with an implementation that is a combination of C and Matlab.]</p>
 <hr />
-<h4 id="2-finding-hierarchy-in-directed-online-social-networks">2. <a href="https://dl.acm.org/doi/10.1145/1963405.1963484">Finding Hierarchy in Directed Online Social Networks</a></h4>
+<h4 id="2-2-finding-hierarchy-in-directed-online-social-networks"><a id = "2">[2]</a> 2. <a href="https://dl.acm.org/doi/10.1145/1963405.1963484">Finding Hierarchy in Directed Online Social Networks</a></h4>
 <p>^<a href="../{&quot;attribution&quot;:{&quot;attributableIndex&quot;:&quot;717-1&quot;}}">The authors define a measure of hierarchy within directed online social networks and present an efficient algorithm to compute this measure. This work provides insights into the structural organization of social networks and how hierarchical relationships can be identified and quantified.</a> <a href="https://dl.acm.org/doi/10.1145/1963405.1963484?utm_source=chatgpt.com">oai_citation:0‡ACM Digital Library</a></p>
 <hr />
-<h4 id="3-faster-way-to-agony-discovering-hierarchies-in-directed-graphs">3. <a href="https://arxiv.org/pdf/1902.01477">Faster Way to Agony: Discovering Hierarchies in Directed Graphs</a></h4>
+<h4 id="3-3-faster-way-to-agony-discovering-hierarchies-in-directed-graphs"><a id="3">[3]</a> 3. <a href="https://arxiv.org/pdf/1902.01477">Faster Way to Agony: Discovering Hierarchies in Directed Graphs</a></h4>
 <p>^<a href="../{&quot;attribution&quot;:{&quot;attributableIndex&quot;:&quot;1127-1&quot;}}">This paper presents an improved algorithm for computing "agony," a metric used to quantify the hierarchical structure in directed graphs. The proposed method reduces the computational complexity from O(nm²) to O(m²), making it more practical for analyzing large-scale networks.</a> <a href="https://arxiv.org/abs/1902.01477?utm_source=chatgpt.com">oai_citation:1‡arXiv</a></p>
 <hr />
 <h4 id="4-tiers-for-peers-a-practical-algorithm-for-discovering-hierarchy-in-weighted-networks">4. <a href="https://arxiv.org/pdf/1903.02999">Tiers for Peers: A Practical Algorithm for Discovering Hierarchy in Weighted Networks</a></h4>
@@ -164,8 +174,18 @@ If you haven't installed it yet, <a href="https://pixi.sh/latest/">follow these 
 <hr />
 <h4 id="5-reconstructing-directed-gene-regulatory-network-by-only-gene-expression-data">5. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5001240/">Reconstructing Directed Gene Regulatory Network by Only Gene Expression Data</a></h4>
 <p>^<a href="../{&quot;attribution&quot;:{&quot;attributableIndex&quot;:&quot;1987-1&quot;}}">The paper proposes the Context-Based Dependency Network (CBDN) method to reconstruct directed gene regulatory networks using solely gene expression data. This approach addresses the challenge of inferring regulatory directions without additional data, such as eQTLs or gene knock-out experiments, which are often unavailable for human tissue samples.</a></p>
+<hr />
 <h4 id="6-resolution-of-ranking-hierarchies-in-directed-networks">6. <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0191604">Resolution of Ranking Hierarchies in Directed Networks</a></h4>
 <p>^[ranked stochastic block models]</p>
+<hr />
+<h4 id="7-scenic-single-cell-regulatory-network-inference-and-clustering">7. <a href="https://www.nature.com/articles/nmeth.4463">SCENIC: single-cell regulatory network inference and clustering</a></h4>
+<p>^[A paper that infers single cell gene regulatory networks. ]</p>
+<hr />
+<h4 id="8-inferring-regulatory-networks-from-expression-data-using-tree-based-methods">8. <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0012776">Inferring Regulatory Networks from Expression Data Using Tree-Based Methods</a></h4>
+<p>^[The GENIE3 algorithm for inferring directed gene regulatory networks. There exists a <a href="https://github.com/vahuynh/GENIE3">github repo</a> with implementations in C, R, Matlab, and python. This is used in the SCENIC pipeline.]</p>
+<hr />
+<h4 id="9-blars-an-algorithm-to-infer-gene-regulatory-networks">9. <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7138615">bLARS: An Algorithm to Infer Gene Regulatory Networks</a></h4>
+<p>^[Another algorithm for inferring directed gene regulatory networks from gene expression.]</p>
               
             </div>
           </div><footer>
@@ -218,5 +238,5 @@ If you haven't installed it yet, <a href="https://pixi.sh/latest/">follow these 
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-05-09 14:11:20.675639+00:00
+Build Date UTC : 2025-05-13 23:44:01.702675+00:00
 -->
