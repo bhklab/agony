@@ -57,7 +57,7 @@ Click [here](https://bhklab.github.io/agony) to view the full documentation.
 
 ## Project Ideas and Next Steps
 
-The notion of **graph agony** was developed out of a desire to find hierarchies in directed networks [[2]](#2). 
+The notion of **graph agony** was developed out of a desire to find hierarchies in directed networks [[2]](#2). Intuitively, a hierarchy assigns the nodes in a graph to a *rank* where $r$.
 
 
 
