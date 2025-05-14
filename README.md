@@ -25,7 +25,7 @@ The notion of **graph agony** was developed out of a desire to find hierarchies 
 
 Agony works by trying to *find* a hierarchy that best reflects that structure of a given directed network. At a very high level the algorithms in [[2]](#2), [[3]](#3), and [[4]](#4) operate on the same way:
 
-- **Input:**  A directed graph $G=(V,E).
+- **Input:**  A directed graph $G=(V,E)$.
 - **Output:** A rank function $r^*:V\to \mathbb{N}$, and a value $A(G)$ that is the agony of the graph $G$.
 
 The values of $r^*$ and $A(G)$ are found by solving the following minimization problem:
