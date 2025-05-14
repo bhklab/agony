@@ -168,12 +168,19 @@ Click [here](https://bhklab.github.io/agony) to view the full documentation.
 #### <a id="9">[9.]</a> [bLARS: An Algorithm to Infer Gene Regulatory Networks](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7138615)
 ^[Another algorithm for inferring directed gene regulatory networks from gene expression.]
 
-#### <a id="10">[10.]</a> [Integrate Any Omics: Towards genome-wide
-data integration for patient stratification](https://arxiv.org/pdf/2401.07937)
-^[]
+--------------------------------------
 
-#### <a id="11">[11.]</a> [Screening cell–cell communication in
-spatial transcriptomics via collective
-optimal transport](https://www.nature.com/articles/s41592-022-01728-4)
+#### <a id="10">[10.]</a> [Integrate Any Omics: Towards genome-wide data integration for patient stratification](https://arxiv.org/pdf/2401.07937)
+^[a Deep Learning/AI paper for learning patient similarity.]
+
+--------------------------------------
+
+#### <a id="11">[11.]</a> [Screening cell–cell communication in spatial transcriptomics via collective optimal transport](https://www.nature.com/articles/s41592-022-01728-4)
+^[cell cell coms]
+
+--------------------------------------
 
 #### <a id="12">[12.]</a> [Intrinsic disorder in cell-signaling and cancer-associated proteins](https://pubmed.ncbi.nlm.nih.gov/12381310/)
+^[cell disorder]
+
+--------------------------------------
