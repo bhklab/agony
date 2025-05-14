@@ -42,6 +42,8 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Home</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#set-up">Set Up</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a>
@@ -55,18 +57,22 @@
     <li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#project-ideas-and-next-steps">Project Ideas and Next Steps</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#project-ideas">Project Ideas</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#references">References</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#annotated-list-of-papers">📄 Annotated List of Papers</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#1-1-inferring-genome-wide-interaction-networks-using-the-phi-mixing-coefficient">[1] 1. Inferring Genome-Wide Interaction Networks Using the Phi-Mixing Coefficient</a>
+    <li class="toctree-l4"><a class="reference internal" href="#1-inferring-genome-wide-interaction-networks-using-the-phi-mixing-coefficient">[1.] Inferring Genome-Wide Interaction Networks Using the Phi-Mixing Coefficient</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#2-finding-hierarchy-in-directed-online-social-networks">[2.] Finding Hierarchy in Directed Online Social Networks</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#3-3-faster-way-to-agony-discovering-hierarchies-in-directed-graphs">[3] 3. Faster Way to Agony: Discovering Hierarchies in Directed Graphs</a>
+    <li class="toctree-l4"><a class="reference internal" href="#3-faster-way-to-agony-discovering-hierarchies-in-directed-graphs">[3.] Faster Way to Agony: Discovering Hierarchies in Directed Graphs</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#4-tiers-for-peers-a-practical-algorithm-for-discovering-hierarchy-in-weighted-networks">4. Tiers for Peers: A Practical Algorithm for Discovering Hierarchy in Weighted Networks</a>
+    <li class="toctree-l4"><a class="reference internal" href="#4-tiers-for-peers-a-practical-algorithm-for-discovering-hierarchy-in-weighted-networks">[4.] Tiers for Peers: A Practical Algorithm for Discovering Hierarchy in Weighted Networks</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#5-reconstructing-directed-gene-regulatory-network-by-only-gene-expression-data">5. Reconstructing Directed Gene Regulatory Network by Only Gene Expression Data</a>
     </li>
@@ -122,6 +128,10 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="agony">Agony</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The notion of <strong>graph agony</strong> was developed out of a desire to find hierarchies in directed networks <a href="#2">[2]</a>. Intuitively, a hierarchy -- in an organization or social network, for example -- involves assigning <em>levels</em> or <em>ranks</em> to people such that the ranks are ordered. For example, the CEO of a company should rank higher than an intern. </p>
+<p>Agony works by trying to <em>find</em> a hierarchy that best reflects that structure of a given directed network. Specifically we set in</p>
+<p>$$a$$</p>
 <p><strong>Authors:</strong> <a href="https://github.com/jbannon">James Bannon</a>, <a href="https://github.com/julianguyn">Julia Nguyen</a>, <a href="https://github.com/mattbocc">Matthew Boccalon</a>, <a href="https://github.com/jjjermiah">Jermiah Joseph</a></p>
 <p><strong>Contact:</strong> <a href="mailto:bhklab.jermiahjoseph@gmail.com">bhklab.jermiahjoseph@gmail.com</a></p>
 <p><strong>Description:</strong> Agony implementation</p>
@@ -156,20 +166,20 @@ If you haven't installed it yet, <a href="https://pixi.sh/latest/">follow these 
 <h2 id="documentation">Documentation</h2>
 <p>Click <a href="https://bhklab.github.io/agony">here</a> to view the full documentation.</p>
 <h2 id="project-ideas-and-next-steps">Project Ideas and Next Steps</h2>
-<p>The notion of <strong>graph agony</strong> was developed out of a desire to find hierarchies in directed networks <a href="#2">[2]</a>. Intuitively, a hierarchy assigns the nodes in a graph to a <em>rank</em> where $r$.</p>
+<h3 id="project-ideas">Project Ideas</h3>
 <h2 id="references">References</h2>
 <h3 id="annotated-list-of-papers">📄 Annotated List of Papers</h3>
 <hr />
-<h4 id="1-1-inferring-genome-wide-interaction-networks-using-the-phi-mixing-coefficient"><a id="1">[1]</a> 1. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7731978/pdf/nihms-1539098.pdf">Inferring Genome-Wide Interaction Networks Using the Phi-Mixing Coefficient</a></h4>
+<h4 id="1-inferring-genome-wide-interaction-networks-using-the-phi-mixing-coefficient"><a id="1">[1.]</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7731978/pdf/nihms-1539098.pdf">Inferring Genome-Wide Interaction Networks Using the Phi-Mixing Coefficient</a></h4>
 <p>^[This paper introduces a novel algorithm based on the φ-mixing coefficient from probability theory to infer genome-wide interaction networks. The method allows for the construction of weighted and directed networks that can contain cycles, and it has been applied to study subtypes of lung cancer, including small cell (SCLC) and non-small cell (NSCLC), as well as normal lung tissue. There is a <a href="https://github.com/nitinksingh/phixer/tree/master">github repo</a> with an implementation that is a combination of C and Matlab.]</p>
 <hr />
 <h4 id="2-finding-hierarchy-in-directed-online-social-networks"><a id = "2">[2.]</a>  <a href="https://dl.acm.org/doi/10.1145/1963405.1963484">Finding Hierarchy in Directed Online Social Networks</a></h4>
 <p>^<a href="../{&quot;attribution&quot;:{&quot;attributableIndex&quot;:&quot;717-1&quot;}}">The authors define a measure of hierarchy within directed online social networks and present an efficient algorithm to compute this measure. This work provides insights into the structural organization of social networks and how hierarchical relationships can be identified and quantified.</a> <a href="https://dl.acm.org/doi/10.1145/1963405.1963484?utm_source=chatgpt.com">oai_citation:0‡ACM Digital Library</a></p>
 <hr />
-<h4 id="3-3-faster-way-to-agony-discovering-hierarchies-in-directed-graphs"><a id="3">[3]</a> 3. <a href="https://arxiv.org/pdf/1902.01477">Faster Way to Agony: Discovering Hierarchies in Directed Graphs</a></h4>
+<h4 id="3-faster-way-to-agony-discovering-hierarchies-in-directed-graphs"><a id="3">[3.]</a> <a href="https://arxiv.org/pdf/1902.01477">Faster Way to Agony: Discovering Hierarchies in Directed Graphs</a></h4>
 <p>^<a href="../{&quot;attribution&quot;:{&quot;attributableIndex&quot;:&quot;1127-1&quot;}}">This paper presents an improved algorithm for computing "agony," a metric used to quantify the hierarchical structure in directed graphs. The proposed method reduces the computational complexity from O(nm²) to O(m²), making it more practical for analyzing large-scale networks.</a> <a href="https://arxiv.org/abs/1902.01477?utm_source=chatgpt.com">oai_citation:1‡arXiv</a></p>
 <hr />
-<h4 id="4-tiers-for-peers-a-practical-algorithm-for-discovering-hierarchy-in-weighted-networks">4. <a href="https://arxiv.org/pdf/1903.02999">Tiers for Peers: A Practical Algorithm for Discovering Hierarchy in Weighted Networks</a></h4>
+<h4 id="4-tiers-for-peers-a-practical-algorithm-for-discovering-hierarchy-in-weighted-networks"><a id="4">[4.]</a> <a href="https://arxiv.org/pdf/1903.02999">Tiers for Peers: A Practical Algorithm for Discovering Hierarchy in Weighted Networks</a></h4>
 <p>^<a href="../{&quot;attribution&quot;:{&quot;attributableIndex&quot;:&quot;1522-1&quot;}}">Building upon the concept of agony, this study extends the approach to weighted networks and introduces constraints on the number of hierarchical levels. The authors connect the problem to the capacitated circulation problem and provide both exact and heuristic solutions, demonstrating efficiency in handling large datasets.</a></p>
 <hr />
 <h4 id="5-reconstructing-directed-gene-regulatory-network-by-only-gene-expression-data">5. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5001240/">Reconstructing Directed Gene Regulatory Network by Only Gene Expression Data</a></h4>
@@ -238,5 +248,5 @@ If you haven't installed it yet, <a href="https://pixi.sh/latest/">follow these 
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-05-13 23:47:40.109416+00:00
+Build Date UTC : 2025-05-14 00:04:43.869707+00:00
 -->
