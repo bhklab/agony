@@ -32,7 +32,8 @@ The values of $r^*$ and $A(G)$ are found by solving the following minimization p
 
 $$\underset{r:V\to\mathbb{N}}{\min}\sum_{(u,v)\in E}\max(0,r(u)-r(v)+1)$$
 
-where $r^*$ is the function that minimizes the above sum
+where $r^*$ is the function that minimizes the above sum and 
+$$A(G)= \sum_{(u,v)\in E}\max(0,r^{*}(u)-r^{*}(v)+1)$$$$
 
 ## Immediate Next Steps
 
