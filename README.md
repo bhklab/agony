@@ -58,7 +58,22 @@ The way I see it, there are two ways that we can proceed with a PGx style paper.
 
 ##### Agony As A Biomarker
 
-In the unweighted case, the agony is bounded above by $|E|$ and 
+In the unweighted case, the agony is bounded above by $|E|$ and the authors in [[2]](#2) define a measure of *hierarchy* of a graph via $h(G)=1-\frac{1}{|E|}A(G)$. It follows then that the agony value $A(G)$, even weighted, can be thought of as a measure of organizational disorder. Since cancer is defined by escaping the normally tightly controlled regulatory set up of the cell cycle [[12]](#12) it makes sense that cancer samples should have higher agony. The steps for this project would be something like the following. 
+
+1. Pick a collection of samples that can be easily and meaningfully partitioned (e.g., responders vs. nonresponders to ICIs, cancer vs. normal samples).
+
+2. For each group construct a directed gene regulatory network (GRN) using one of the existing methods: [[1]](#1), [[5]](#5), [[8]](#8), [[9]](#9)
+
+3. Compare the agony for the graphs across the two groups. 
+
+
+Alternatively we could do this on a patient-level by looking at single-cell GRN inference ([[7]](#7)). Another option would be to look at the agony of cell-cell communication networks [[11]](#11).
+
+
+##### Agony For Drug Recommendation
+
+This is as presented in the PGx meeting. K-Nearest neighbors using, e.g.[[10]](#10).
+
 ## Set Up
 
 ### Prerequisites
@@ -160,3 +175,5 @@ data integration for patient stratification](https://arxiv.org/pdf/2401.07937)
 #### <a id="11">[11.]</a> [Screening cell–cell communication in
 spatial transcriptomics via collective
 optimal transport](https://www.nature.com/articles/s41592-022-01728-4)
+
+#### <a id="12">[12.]</a> [Intrinsic disorder in cell-signaling and cancer-associated proteins](https://pubmed.ncbi.nlm.nih.gov/12381310/)
