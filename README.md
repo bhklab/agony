@@ -32,7 +32,7 @@ The values of $r^*$ and $A(G)$ are found by solving the following minimization p
 
 $$\underset{r:V\to\mathbb{N}}{\min}\sum_{(u,v)\in E}\max(0,r(u)-r(v)+1)$$
 
-where $r^*$ is the function that minimizes the above and $A(G)$ is the value of the sum $\sum_{(u,v)\in E}\max(0,r^*(u)-r^*(v)+1)$
+where 
 
 ## Immediate Next Steps
 
@@ -58,6 +58,7 @@ The way I see it, there are two ways that we can proceed with a PGx style paper.
 
 ##### Agony As A Biomarker
 
+In the unweighted case, the agony is bounded above by $|E|$ and 
 ## Set Up
 
 ### Prerequisites
