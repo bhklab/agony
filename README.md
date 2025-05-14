@@ -29,7 +29,8 @@ Agony works by trying to *find* a hierarchy that best reflects that structure of
 - **Output:** A rank function $r:V\to \mathbb{N}$, and a value $A(G)$ that is the agony of the graph $G$.
 
 The values of $r$ and $A(G)$ are found by solving the following minimization problem:
-$$\underset{a}{b}$$
+
+$$\underset{r:V\to\mathbb{N}}{\min}\sum_{(u,v)\in E)\max\{0,r(u)-r(v)+1\}$$
 
 ## Immediate Next Steps
 
