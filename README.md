@@ -1,5 +1,17 @@
 # Agony
 
+
+## Introduction
+
+The notion of **graph agony** was developed out of a desire to find hierarchies in directed networks [[2]](#2). Intuitively, a hierarchy -- in an organization or social network, for example -- involves assigning *levels* or *ranks* to people such that the ranks are ordered. For example, the CEO of a company should rank higher than an intern. 
+
+Agony works by trying to *find* a hierarchy that best reflects that structure of a given directed network. Specifically we set in
+
+
+$$a$$
+
+
+
 **Authors:** [James Bannon](https://github.com/jbannon), [Julia Nguyen](https://github.com/julianguyn), [Matthew Boccalon](https://github.com/mattbocc), [Jermiah Joseph](https://github.com/jjjermiah)
 
 **Contact:** [bhklab.jermiahjoseph@gmail.com](mailto:bhklab.jermiahjoseph@gmail.com)
@@ -57,8 +69,11 @@ Click [here](https://bhklab.github.io/agony) to view the full documentation.
 
 ## Project Ideas and Next Steps
 
-The notion of **graph agony** was developed out of a desire to find hierarchies in directed networks [[2]](#2). Intuitively, a hierarchy assigns the nodes in a graph to a *rank* where $r$.
 
+
+
+
+### Project Ideas
 
 
 ## References
@@ -67,7 +82,7 @@ The notion of **graph agony** was developed out of a desire to find hierarchies 
 
 --------------------------------------
 
-#### <a id="1">[1]</a> 1. [Inferring Genome-Wide Interaction Networks Using the Phi-Mixing Coefficient](https://pmc.ncbi.nlm.nih.gov/articles/PMC7731978/pdf/nihms-1539098.pdf)
+#### <a id="1">[1.]</a> [Inferring Genome-Wide Interaction Networks Using the Phi-Mixing Coefficient](https://pmc.ncbi.nlm.nih.gov/articles/PMC7731978/pdf/nihms-1539098.pdf)
 
 ^[This paper introduces a novel algorithm based on the φ-mixing coefficient from probability theory to infer genome-wide interaction networks. The method allows for the construction of weighted and directed networks that can contain cycles, and it has been applied to study subtypes of lung cancer, including small cell (SCLC) and non-small cell (NSCLC), as well as normal lung tissue. There is a [github repo](https://github.com/nitinksingh/phixer/tree/master) with an implementation that is a combination of C and Matlab.]
 
@@ -79,13 +94,13 @@ The notion of **graph agony** was developed out of a desire to find hierarchies 
 
 --------------------------------------
 
-#### <a id="3">[3]</a> 3. [Faster Way to Agony: Discovering Hierarchies in Directed Graphs](https://arxiv.org/pdf/1902.01477)
+#### <a id="3">[3.]</a> [Faster Way to Agony: Discovering Hierarchies in Directed Graphs](https://arxiv.org/pdf/1902.01477)
 
 ^[This paper presents an improved algorithm for computing "agony," a metric used to quantify the hierarchical structure in directed graphs. The proposed method reduces the computational complexity from O(nm²) to O(m²), making it more practical for analyzing large-scale networks.]({"attribution":{"attributableIndex":"1127-1"}}) [oai_citation:1‡arXiv](https://arxiv.org/abs/1902.01477?utm_source=chatgpt.com)
 
 --------------------------------------
 
-#### 4. [Tiers for Peers: A Practical Algorithm for Discovering Hierarchy in Weighted Networks](https://arxiv.org/pdf/1903.02999)
+#### <a id="4">[4.]</a> [Tiers for Peers: A Practical Algorithm for Discovering Hierarchy in Weighted Networks](https://arxiv.org/pdf/1903.02999)
 
 ^[Building upon the concept of agony, this study extends the approach to weighted networks and introduces constraints on the number of hierarchical levels. The authors connect the problem to the capacitated circulation problem and provide both exact and heuristic solutions, demonstrating efficiency in handling large datasets.]({"attribution":{"attributableIndex":"1522-1"}})
 
