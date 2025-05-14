@@ -46,6 +46,18 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#immediate-next-steps">Immediate Next Steps</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#project-ideas">Project Ideas</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#software-paper">Software Paper</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pharmacogenomics-papers">Pharmacogenomics Papers</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#agony-as-a-biomarker">Agony As A Biomarker</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#set-up">Set Up</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a>
@@ -70,15 +82,19 @@
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#4-tiers-for-peers-a-practical-algorithm-for-discovering-hierarchy-in-weighted-networks">[4.] Tiers for Peers: A Practical Algorithm for Discovering Hierarchy in Weighted Networks</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#5-reconstructing-directed-gene-regulatory-network-by-only-gene-expression-data">5. Reconstructing Directed Gene Regulatory Network by Only Gene Expression Data</a>
+    <li class="toctree-l4"><a class="reference internal" href="#5-reconstructing-directed-gene-regulatory-network-by-only-gene-expression-data">[5.] Reconstructing Directed Gene Regulatory Network by Only Gene Expression Data</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#6-resolution-of-ranking-hierarchies-in-directed-networks">6. Resolution of Ranking Hierarchies in Directed Networks</a>
+    <li class="toctree-l4"><a class="reference internal" href="#6-resolution-of-ranking-hierarchies-in-directed-networks">[6.] Resolution of Ranking Hierarchies in Directed Networks</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#7-scenic-single-cell-regulatory-network-inference-and-clustering">7. SCENIC: single-cell regulatory network inference and clustering</a>
+    <li class="toctree-l4"><a class="reference internal" href="#7-scenic-single-cell-regulatory-network-inference-and-clustering">[7.] SCENIC: single-cell regulatory network inference and clustering</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#8-inferring-regulatory-networks-from-expression-data-using-tree-based-methods">8. Inferring Regulatory Networks from Expression Data Using Tree-Based Methods</a>
+    <li class="toctree-l4"><a class="reference internal" href="#8-inferring-regulatory-networks-from-expression-data-using-tree-based-methods">[8.] Inferring Regulatory Networks from Expression Data Using Tree-Based Methods</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#9-blars-an-algorithm-to-infer-gene-regulatory-networks">9. bLARS: An Algorithm to Infer Gene Regulatory Networks</a>
+    <li class="toctree-l4"><a class="reference internal" href="#9-blars-an-algorithm-to-infer-gene-regulatory-networks">[9.] bLARS: An Algorithm to Infer Gene Regulatory Networks</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#10-integrate-any-omics-towards-genome-wide">[10.] [Integrate Any Omics: Towards genome-wide</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#11-screening-cellcell-communication-in">[11.] [Screening cell–cell communication in</a>
     </li>
         </ul>
     </li>
@@ -141,11 +157,25 @@
 <p>Agony works by trying to <em>find</em> a hierarchy that best reflects that structure of a given directed network. At a very high level the algorithms in <a href="#2">[2]</a>, <a href="#3">[3]</a>, and <a href="#4">[4]</a> operate on the same way:</p>
 <ul>
 <li><strong>Input:</strong>  A directed graph $G=(V,E).</li>
-<li><strong>Output:</strong> A rank function $r:V\to \mathbb{N}$, and a value $A(G)$ that is the agony of the graph $G$.</li>
+<li><strong>Output:</strong> A rank function $r^*:V\to \mathbb{N}$, and a value $A(G)$ that is the agony of the graph $G$.</li>
 </ul>
-<p>The values of $r$ and $A(G)$ are found by solving the following minimization problem:</p>
-<p>$$\underset{r:V\to\mathbb{N}}{\min}\sum_{(u,v)\in E)}\max{0,r(u)-r(v)+1}$$</p>
+<p>The values of $r^*$ and $A(G)$ are found by solving the following minimization problem:</p>
+<p>$$\underset{r:V\to\mathbb{N}}{\min}\sum_{(u,v)\in E}\max(0,r(u)-r(v)+1)$$</p>
+<p>where $r^<em>$ is the function that minimizes the above and $A(G)$ is the value of the sum $\sum_{(u,v)\in E}\max(0,r^</em>(u)-r^*(v)+1)$</p>
 <h2 id="immediate-next-steps">Immediate Next Steps</h2>
+<p>The most immediate next steps involve implementing the ability to compute the weighted and unweighted versions of agony as described in <a href="#3">[3]</a> and <a href="#4">[4]</a>, respectively. We should do this at least in first in pure <code>python.</code> Below are some next steps along with tentative assignments to project members.</p>
+<p><strong>TO DO:</strong>
+- Read over Tiers for Peers <a href="#4">[4]</a> and define the most general form of the agony problem. (James)
+- Re-write the linear program agony code such that it's more readable. (James)
+- Write the <code>C++</code> code in <code>python</code> likely using the <code>heapq</code> module for the priority queue. <code>R</code> also has a <a href="https://www.rdocumentation.org/packages/collections/versions/0.1.5/topics/PriorityQueue">priority queue implemented</a>. (James, Jermiah, Matthew)
+- De-bug and benchmark the <code>python</code> implementation against its <code>C++</code> counterpart. (Jermiah, Matthew)
+- Investigate the weighted agony algorithm defined in <a href="#4">[4]</a>. (James, Jermiah, Matthew). The author of <a href="#4">[4]</a> has made a <a href="http://users.ics.aalto.fi/ntatti/agony.zip">C++ implementation available</a>. The files are also in this repo in the <code>agony_cpp</code> folder. </p>
+<h2 id="project-ideas">Project Ideas</h2>
+<h3 id="software-paper">Software Paper</h3>
+<p>If we can write a decent <code>python</code> and/or <code>R</code> package we can release it as its own software paper. It might be worth talking to Ben about this because it's not clear if re-writing publicly available code is a worthy paper. That said, making a library available publicly in pure <code>python</code> or <code>R</code> is maybe worth circulating/publishing as a matter of record. </p>
+<h3 id="pharmacogenomics-papers">Pharmacogenomics Papers</h3>
+<p>The way I see it, there are two ways that we can proceed with a PGx style paper. One way involves using the agony itself as a biomarker. The second involves using agony for rank aggregation.</p>
+<h5 id="agony-as-a-biomarker">Agony As A Biomarker</h5>
 <h2 id="set-up">Set Up</h2>
 <h3 id="prerequisites">Prerequisites</h3>
 <p>Pixi is required to run this project.
@@ -182,20 +212,26 @@ If you haven't installed it yet, <a href="https://pixi.sh/latest/">follow these 
 <h4 id="4-tiers-for-peers-a-practical-algorithm-for-discovering-hierarchy-in-weighted-networks"><a id="4">[4.]</a> <a href="https://arxiv.org/pdf/1903.02999">Tiers for Peers: A Practical Algorithm for Discovering Hierarchy in Weighted Networks</a></h4>
 <p>^<a href="../{&quot;attribution&quot;:{&quot;attributableIndex&quot;:&quot;1522-1&quot;}}">Building upon the concept of agony, this study extends the approach to weighted networks and introduces constraints on the number of hierarchical levels. The authors connect the problem to the capacitated circulation problem and provide both exact and heuristic solutions, demonstrating efficiency in handling large datasets.</a></p>
 <hr />
-<h4 id="5-reconstructing-directed-gene-regulatory-network-by-only-gene-expression-data">5. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5001240/">Reconstructing Directed Gene Regulatory Network by Only Gene Expression Data</a></h4>
+<h4 id="5-reconstructing-directed-gene-regulatory-network-by-only-gene-expression-data"><a id="5">[5.]</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5001240/">Reconstructing Directed Gene Regulatory Network by Only Gene Expression Data</a></h4>
 <p>^<a href="../{&quot;attribution&quot;:{&quot;attributableIndex&quot;:&quot;1987-1&quot;}}">The paper proposes the Context-Based Dependency Network (CBDN) method to reconstruct directed gene regulatory networks using solely gene expression data. This approach addresses the challenge of inferring regulatory directions without additional data, such as eQTLs or gene knock-out experiments, which are often unavailable for human tissue samples.</a></p>
 <hr />
-<h4 id="6-resolution-of-ranking-hierarchies-in-directed-networks">6. <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0191604">Resolution of Ranking Hierarchies in Directed Networks</a></h4>
+<h4 id="6-resolution-of-ranking-hierarchies-in-directed-networks"><a id="6">[6.]</a> <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0191604">Resolution of Ranking Hierarchies in Directed Networks</a></h4>
 <p>^[ranked stochastic block models]</p>
 <hr />
-<h4 id="7-scenic-single-cell-regulatory-network-inference-and-clustering">7. <a href="https://www.nature.com/articles/nmeth.4463">SCENIC: single-cell regulatory network inference and clustering</a></h4>
+<h4 id="7-scenic-single-cell-regulatory-network-inference-and-clustering"><a id="7">[7.]</a> <a href="https://www.nature.com/articles/nmeth.4463">SCENIC: single-cell regulatory network inference and clustering</a></h4>
 <p>^[A paper that infers single cell gene regulatory networks. ]</p>
 <hr />
-<h4 id="8-inferring-regulatory-networks-from-expression-data-using-tree-based-methods">8. <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0012776">Inferring Regulatory Networks from Expression Data Using Tree-Based Methods</a></h4>
+<h4 id="8-inferring-regulatory-networks-from-expression-data-using-tree-based-methods"><a id="8">[8.]</a> <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0012776">Inferring Regulatory Networks from Expression Data Using Tree-Based Methods</a></h4>
 <p>^[The GENIE3 algorithm for inferring directed gene regulatory networks. There exists a <a href="https://github.com/vahuynh/GENIE3">github repo</a> with implementations in C, R, Matlab, and python. This is used in the SCENIC pipeline.]</p>
 <hr />
-<h4 id="9-blars-an-algorithm-to-infer-gene-regulatory-networks">9. <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7138615">bLARS: An Algorithm to Infer Gene Regulatory Networks</a></h4>
+<h4 id="9-blars-an-algorithm-to-infer-gene-regulatory-networks"><a id="9">[9.]</a> <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7138615">bLARS: An Algorithm to Infer Gene Regulatory Networks</a></h4>
 <p>^[Another algorithm for inferring directed gene regulatory networks from gene expression.]</p>
+<h4 id="10-integrate-any-omics-towards-genome-wide"><a id="10">[10.]</a> [Integrate Any Omics: Towards genome-wide</h4>
+<p>data integration for patient stratification](https://arxiv.org/pdf/2401.07937)
+^[]</p>
+<h4 id="11-screening-cellcell-communication-in"><a id="11">[11.]</a> [Screening cell–cell communication in</h4>
+<p>spatial transcriptomics via collective
+optimal transport](https://www.nature.com/articles/s41592-022-01728-4)</p>
               
             </div>
           </div><footer>
@@ -248,5 +284,5 @@ If you haven't installed it yet, <a href="https://pixi.sh/latest/">follow these 
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-05-14 00:14:16.179747+00:00
+Build Date UTC : 2025-05-14 00:49:00.051661+00:00
 -->
