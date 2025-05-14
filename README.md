@@ -1,17 +1,6 @@
 # Agony
 
 
-## Introduction
-
-The notion of **graph agony** was developed out of a desire to find hierarchies in directed networks [[2]](#2). Intuitively, a hierarchy -- in an organization or social network, for example -- involves assigning *levels* or *ranks* to people such that the ranks are ordered. For example, the CEO of a company should rank higher than an intern. 
-
-Agony works by trying to *find* a hierarchy that best reflects that structure of a given directed network. Specifically we set in
-
-
-$$a$$
-
-
-
 **Authors:** [James Bannon](https://github.com/jbannon), [Julia Nguyen](https://github.com/julianguyn), [Matthew Boccalon](https://github.com/mattbocc), [Jermiah Joseph](https://github.com/jjjermiah)
 
 **Contact:** [bhklab.jermiahjoseph@gmail.com](mailto:bhklab.jermiahjoseph@gmail.com)
@@ -29,6 +18,23 @@ $$a$$
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/bhklab/agony?style=flat-square)
 ![GitHub contributors](https://img.shields.io/github/contributors/bhklab/agony?style=flat-square)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/bhklab/agony?style=flat-square)
+
+## Introduction
+
+The notion of **graph agony** was developed out of a desire to find hierarchies in directed networks [[2]](#2). Intuitively, a hierarchy -- in an organization or social network, for example -- involves assigning *levels* or *ranks* to people such that the ranks are ordered. For example, the CEO of a company should rank higher than an intern. 
+
+Agony works by trying to *find* a hierarchy that best reflects that structure of a given directed network. At a very high level the algorithms in [[2]](#2), [[3]](#3), and [[4]](#4) operate on the same way:
+
+- **Input:**  A directed graph $G=(V,E).
+- **Output:** A rank function $r:V\to \mathbb{N}$, and a value $A(G)$ that is the agony of the graph $G$.
+
+The values of $r$ and $A(G)$ are found by solving the following minimization problem:
+$$\underset{a}{b}$$
+
+## Immediate Next Steps
+
+
+
 
 ## Set Up
 
@@ -65,15 +71,6 @@ pixi run cycle_dfs
 
 Click [here](https://bhklab.github.io/agony) to view the full documentation.
 
-
-
-## Project Ideas and Next Steps
-
-
-
-
-
-### Project Ideas
 
 
 ## References
