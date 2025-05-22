@@ -1,11 +1,11 @@
 #!/usr/bin/env Rscript
 
 # Load the agony implementation
-source("agony.R")
+source("r_test/agony.R")
 
 # Load example graph from file
 cat("Loading example graph from file...\n")
-graph <- load_edgelist("example_graph.txt")
+graph <- load_edgelist("r_test/example_graph.txt")
 
 # Print graph information
 cat(
@@ -55,7 +55,7 @@ random_graph <- DirectedGraph$new()
 n_nodes <- 100
 n_edges <- 300
 
-set.seed(42) # For reproducibility
+# set.seed(42) # For reproducibility
 for (i in 1:n_edges) {
   source_node <- sample(1:n_nodes, 1)
   target_node <- sample(1:n_nodes, 1)
