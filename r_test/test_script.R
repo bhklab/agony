@@ -1,11 +1,11 @@
 #!/usr/bin/env Rscript
 
 # Load the agony implementation
-source("r-test/agony.R")
+source("agony.R")
 
 # Load example graph from file
 cat("Loading example graph from file...\n")
-graph <- load_edgelist("r-test/example_graph.txt")
+graph <- load_edgelist("example_graph.txt")
 
 # Print graph information
 cat(
